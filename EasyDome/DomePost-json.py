@@ -8,6 +8,7 @@ data = {
 	    "password": "123456",
 	    "username": "s2"
         }
+# 字典格式，方便添加和修改
 headers = {"Content-Type":"application/json"}
 # 严格来说，我们需要在请求头里声明我们发送的格式
 res = requests.post(url=url, data=json.dumps(data),headers=headers)
