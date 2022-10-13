@@ -1,9 +1,13 @@
 import  requests
+import  time
+
 
 url1 = "https://api.binstd.com/train/station2s?appkey=b617c827636c6bb5&start=天津&end=北京&ishigh=0"
 # 参数可以写到url里
 res1 = requests.get(url=url1)
 print(res1.text)
+
+time.sleep(3)
 
 url2 = "https://api.binstd.com/train/station2s?"
 params = {"appkey":"b617c827636c6bb5",
