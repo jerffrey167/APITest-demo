@@ -11,9 +11,11 @@ Userlogin_data = {
 login_res = requests.post(url=url+Userlogin_api, json=Userlogin_data,headers=header)
 Login_token = login_res.json()["data"]["token"]
 print("token:",Login_token)
+print(header)
 ###############################################
 header["token"] = Login_token
 #token 赋值
+print(header)
 ##################################################
 Exam_Detail_api="/exam/api/exam/exam/detail"
 Exam_Detail_data={"id":"1356425140212076545"}
