@@ -15,7 +15,7 @@ cookie = login_res.cookies
 
 ########################
 
-shop_home_favorites_api="/exam/user/studentPaper/stupaper.action"
+user_studentPaper_stupaper_api="/exam/user/studentPaper/stupaper.action"
 
-home_favorites = requests.get(url=url+shop_home_favorites_api,cookies=cookie)
+home_favorites = requests.get(url=url+user_studentPaper_stupaper_api,cookies=cookie)
 print(home_favorites.text)
