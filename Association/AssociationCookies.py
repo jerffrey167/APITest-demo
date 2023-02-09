@@ -1,6 +1,6 @@
 import requests
 
-url = "http://120.46.215.163:8080"
+url = "http://120.46.215.163:8088"
 #########################################
 Userlogin_api ="/exam/user.action"
 Userlogin_data = {

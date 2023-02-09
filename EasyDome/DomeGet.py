@@ -17,3 +17,6 @@ params = {"appkey":"b617c827636c6bb5",
 # 字典格式，单独提出来，方便参数的添加修改等操作
 res2 = requests.get(url=url2, params=params)
 print(res2.text)
+
+
+

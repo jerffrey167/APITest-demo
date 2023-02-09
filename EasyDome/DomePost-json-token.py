@@ -3,7 +3,7 @@ import json
 
 import  requests
 
-url = "http://120.46.215.163:8101/exam/api/sys/depart/paging"
+url = "http://120.46.215.163:8102/exam/api/sys/depart/paging"
 data = {"current":1,
 		"size":10,
 		"params":{"deptName":"后勤"}

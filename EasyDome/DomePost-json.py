@@ -3,7 +3,7 @@ import json
 
 import  requests
 
-url = "http://120.46.215.163:8101/exam/api/sys/user/login"
+url = "http://120.46.215.163:8102/exam/api/sys/user/login"
 data = {
 	    "password": "123456",
 	    "username": "s2"
