@@ -24,8 +24,8 @@ Exam_online_paging_data={
 						 }
 
 Exam_online_paging_res= requests.post(url=url+Exam_online_paging_api,json=Exam_online_paging_data,headers=header)
-print(Exam_online_paging_res.text)
+# print(Exam_online_paging_res.text)
 
-ExamTitle = Exam_online_paging_res.json()["data"]["records"][1]["title"]
+ExamTitle = Exam_online_paging_res.json()["data"]["records"][0]["title"]
 
 print(ExamTitle)
