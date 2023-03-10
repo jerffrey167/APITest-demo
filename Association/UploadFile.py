@@ -27,7 +27,7 @@ qu_import_api="/exam/api/qu/qu/import"
 header_import={"token":""}
 header_import["token"] = Login_token
 files_qu=[
-  ('file',('qu-import-template.xlsx',open('C:/Users/jerffrey/Downloads/qu-import-template.xlsx','rb')))
+  ('file',('123.xlsx',open('C:/Users/jerffrey/Downloads/123.xlsx','rb')))
 ]
 qu_import_res = requests.post(url=url+qu_import_api,files=files_qu,headers=header_import)
 print(qu_import_res.text)

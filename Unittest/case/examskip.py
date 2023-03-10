@@ -16,7 +16,7 @@ class Test_API(unittest.TestCase):
         token = r.json()["data"]["token"]
         msg = r.json()["msg"]
         self.assertEqual(msg,"操作成功！")
-
+        return token
 
     def test_002UploadFile(self):
         files_qu = [
