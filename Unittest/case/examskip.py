@@ -20,7 +20,7 @@ class Test_API(unittest.TestCase):
 
     def test_002UploadFile(self):
         files_qu = [
-            ('file', ('qu-import-template.xlsx', open('C:/Users/jerffrey/Downloads/123.xlsx', 'rb')))
+            ('file', (open('C:/Users/jerffrey/Downloads/123.xlsx', 'rb')))
         ]
         token= self.test_006login()
         if token =={"ddddd"}:
