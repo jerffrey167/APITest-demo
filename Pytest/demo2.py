@@ -6,4 +6,4 @@ class Test_Class:
 
     def test_two(self):
         x = "hello"
-        assert 
+        assert "h" in x
