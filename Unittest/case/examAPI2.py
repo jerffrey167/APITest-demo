@@ -4,15 +4,15 @@ import unittest
 
 class Test_API(unittest.TestCase):
 
+    baseurl = 'http://120.46.215.163:8102'
+    headers = {"Content-Type": "application/json"}
     @classmethod
     def setUpClass(self):
-        global baseurl,headers
-        baseurl = 'http://120.46.215.163:8102'
-        headers = {"Content-Type": "application/json"}
+        pass
 
     def test_001login(self):
         data = {"username": "admin", "password": "admin"}
-        r = requests.post(url=baseurl+"/exam/api/sys/user/login", headers=headers, json=data)
+        r = requests.post(url=self.baseurl+"/exam/api/sys/user/login", headers=self.headers, json=data)
         global token
         token = r.json()["data"]["token"]
         msg = r.json()["msg"]
@@ -25,7 +25,7 @@ class Test_API(unittest.TestCase):
         ]
         header_import = {"token": ""}
         header_import["token"] = token
-        r = requests.post(url=baseurl+"/exam/api/qu/qu/import", headers=header_import, files=files_qu)
+        r = requests.post(url=self.baseurl+"/exam/api/qu/qu/import", headers=header_import, files=files_qu)
         msg = r.json()["msg"]
         self.assertEqual(msg,"请求成功！")
 
