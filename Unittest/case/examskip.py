@@ -6,24 +6,25 @@ class Test_API(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        global baseurl,headers,token
+        global baseurl,headers
         baseurl = 'http://120.46.215.163:8102'
         headers = {"Content-Type": "application/json"}
 
     def test_006login(self):
         data = {"username": "admin", "password": "admin"}
         r = requests.post(url=baseurl+"/exam/api/sys/user/login", headers=headers, json=data)
+        global token
         token = r.json()["data"]["token"]
         msg = r.json()["msg"]
         self.assertEqual(msg,"操作成功！")
-        return token
 
-    def test_002UploadFile(self):
+
+    def test_007UploadFile(self):
         files_qu = [
             ('file', (open('C:/Users/jerffrey/Downloads/123.xlsx', 'rb')))
         ]
-        token= self.test_006login()
-        if token =={"ddddd"}:
+
+        if token !={"ddddd4444444"}:
             self.skipTest("token 不正确不能上传")
         header_import = {"token": ""}
         header_import["token"] = token
