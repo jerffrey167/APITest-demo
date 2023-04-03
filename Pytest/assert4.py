@@ -9,4 +9,4 @@ def exc(x):
 def test_raises():
     with pytest.raises(ValueError, match="value not 0 or None"):
         exc(0)
-    assert eval("1 + 2") == 3
+    assert eval("1 + 2") == 4
