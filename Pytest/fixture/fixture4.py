@@ -1,23 +1,15 @@
 import pytest
 
-def test_search(login):
-    token,username=login
-    print(f'token:{token};username:{username}')
-    print('搜索')
 
-def test_cart(login):
-    print('购物车')
+@pytest.fixture(params=["curry", "kobe", "kd"], ids=["3", "4", "5"], name="abc")
+def login(request):
+    print(f'用户名:{request.param}')
+    yield request.param
 
-def test_order(login):
-    print('下单')
 
-def test_share(connectDB):
-    print('分享')
+def test_demo1(abc):
+    print(f'demo1 case:{abc}')
 
-class TestDemo:
 
-    def test_case1(self,login):
-        print('case1')
-
-    def test_case2(self,login):
-        print('case2')
+if __name__ == "__main__":
+    pytest.main()

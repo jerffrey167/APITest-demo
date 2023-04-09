@@ -1,7 +1,7 @@
 import pytest
 
 
-class Test099():
+class Test099:
 
     @pytest.mark.skip
     def test_one(self):
@@ -13,7 +13,7 @@ class Test099():
         print('test_02')
         assert 2 == 2
 
-    @pytest.mark.skipif(2 == 2, reason="2222")
+    @pytest.mark.skipif(2 == 2, reason="33333")
     def test_three(self):
         print('test_03')
         assert 3 == 3

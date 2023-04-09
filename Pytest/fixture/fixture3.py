@@ -1,21 +1,15 @@
 import pytest
 
-@pytest.fixture(scope='class')
-def login():
-    print('完成登录操作')
-    token='xxxxxxxxxxxxxxx'
-    username='kobe'
-    #yield默认返回None
-    yield token,username
-    print('完成退出登录3')
 
-def test_search(login):
-    token,username=login
-    print(f'token:{token};username:{username}')
-    print('搜索')
+@pytest.fixture(params=["curry", "kobe", "kd"])
+def login(request):
+    print(f'用户名:{request.param}')
+    yield request.param
 
-def test_cart(login):
-    print('购物车')
 
-def test_order(login):
-    print('下单')
+def test_demo1(login):
+    print(f'demo1 case:{login}')
+
+
+if __name__ == "__main__":
+    pytest.main()
