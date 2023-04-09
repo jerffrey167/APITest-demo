@@ -7,7 +7,7 @@ def login():
     username='kobe'
     #yield默认返回None
     yield token,username
-    print('完成退出登录')
+    print('完成退出登录3')
 
 def test_search(login):
     token,username=login

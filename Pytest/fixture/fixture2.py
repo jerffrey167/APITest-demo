@@ -7,7 +7,7 @@ import pytest
 @pytest.fixture(scope='function')
 #@pytest.fixture(scope='class')
 def login():
-    print('完成登录操作')
+    print('完成登录操作2')
 
 def test_search(login):
     print('搜索')
