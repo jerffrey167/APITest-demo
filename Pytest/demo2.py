@@ -1,4 +1,3 @@
-
 class Test_Class:
     def testone(self):
         x = "this"
